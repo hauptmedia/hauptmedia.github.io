@@ -31,8 +31,8 @@
     </head>
     <body>
     <div class="w-100 h-100">
-        <div class="canvas-content">
-            <img src="img/logo_hauptmedia_white.svg" class="img-fluid pl-5 pr-5"/>
+        <div id="content" class="canvas-content">
+            <img src="img/logo_hauptmedia_white.svg" id="logo" class="img-fluid pl-5 pr-5" />
             <div class="pl-5 pr-5">
                 <h3>connecting the dots since 2001.</h3>
             </div>
@@ -65,6 +65,46 @@
         $(window).resize(function() {
             centerContent();
         });
+
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+        document.addEventListener( 'touchstart', onTouch, false );
+        document.addEventListener( 'touchmove', onTouch, false );
+
+
+        var windowHalfX = window.innerWidth / 2,
+            windowHalfY = window.innerHeight / 2;
+
+        function onTouch( event ) {
+
+            if ( event.touches.length == 1 ) {
+
+                event.preventDefault();
+
+                var
+                    shadowX = ((event.touches[ 0 ].pageX - windowHalfX) / window.innerWidth),
+                    shadowY = ((event.touches[ 0 ].pageY - windowHalfY) / window.innerHeight);
+
+                updateShadow(shadowX, shadowY);
+            }
+
+        }
+
+        function onDocumentMouseMove(event) {
+            var
+                shadowX = ((event.clientX - windowHalfX) / window.innerWidth),
+                shadowY = ((event.clientY - windowHalfY) / window.innerHeight);
+
+            updateShadow(shadowX, shadowY);
+        }
+
+        function updateShadow(xOffset, yOffset) {
+            var shadowX = xOffset * -30,
+                shadowY = yOffset * -30;
+
+            $("#content").css("filter", "drop-shadow(" + shadowX + "px " + shadowY + "px 5px rgba(0,0,0,0.5))");
+
+        }
+
     </script>
 
     </body>
