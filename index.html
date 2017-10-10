@@ -15,22 +15,49 @@
                 color: #ebeced;
                 overflow:hidden;
             }
+
             a {
+                text-decoration: none;
                 color: #ebeced;
                 transition: all 0.5s;
             }
+
+            a.xing, a.facebook, a.mail{
+                animation: none;
+
+            }
+
+            a.mail:hover {
+                color: #ebeced;
+                animation: mail 1.5s ease-in-out infinite alternate;
+            }
+
+            a.xing:hover {
+                color: #b0d712;
+                animation: xing 1.5s ease-in-out infinite alternate;
+            }
+
+            a.facebook:hover {
+                color: #3b5998;
+                animation: facebook 1.5s ease-in-out infinite alternate;
+            }
+
+            a.github:hover {
+                color: #6e5494;
+                animation: github 1.5s ease-in-out infinite alternate;
+            }
+
             .social {
-                font-size: 1.8em;
+                font-size: 2.5em;
             }
-            a:hover {
-                animation: neon 1.5s ease-in-out infinite alternate;
-            }
+
             #canvas{
                 overflow: hidden;
                 position:absolute;
                 top:0;
                 left:0;
             }
+
             div.canvas-content{
                 position:relative;
                 z-index:2000;
@@ -38,14 +65,42 @@
                 text-align:center;
             }
 
-            @-webkit-keyframes neon {
+            @-webkit-keyframes mail {
                 from {
-                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ebeced, 0 0 70px #ebeced, 0 0 80px #ebeced, 0 0 100px #ebeced, 0 0 150px #ebeced;
                 }
                 to {
-                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ebeced, 0 0 35px #ebeced, 0 0 40px #ebeced, 0 0 50px #ebeced, 0 0 75px #ebeced;
                 }
             }
+
+            @-webkit-keyframes facebook {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3b5998, 0 0 70px #3b5998, 0 0 80px #3b5998, 0 0 100px #3b5998, 0 0 150px #3b5998;
+                }
+                to {
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #3b5998, 0 0 35px #3b5998, 0 0 40px #3b5998, 0 0 50px #3b5998, 0 0 75px #3b5998;
+                }
+            }
+
+            @-webkit-keyframes xing {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #b0d712, 0 0 70px #b0d712, 0 0 80px #b0d712, 0 0 100px #b0d712, 0 0 150px #b0d712;
+                }
+                to {
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #b0d712, 0 0 35px #b0d712, 0 0 40px #b0d712, 0 0 50px #b0d712, 0 0 75px #b0d712;
+                }
+            }
+
+            @-webkit-keyframes github {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6e5494, 0 0 70px #6e5494, 0 0 80px #6e5494, 0 0 100px #6e5494, 0 0 150px #6e5494;
+                }
+                to {
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6e5494, 0 0 35px #6e5494, 0 0 40px #6e5494, 0 0 50px #6e5494, 0 0 75px #6e5494;
+                }
+            }
+
         </style>
 
     </head>
@@ -57,11 +112,13 @@
                 <h3>connecting the dots since 2001.</h3>
             </div>
             <div class="mt-6 mb-6 social">
-                <a href="mailto:julian.haupt@hauptmedia.de" target="_blank"><i class="fa fa-envelope mr-4" aria-hidden="true"></i></a>
-                <a href="https://www.xing.com/profile/Julian_Haupt" target="_blank"><i class="fa fa-xing mr-4" aria-hidden="true"></i></a>
-                <a href="https://fb.com/julian.haupt" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="mailto:julian.haupt@hauptmedia.de" target="_blank" class="mail"><i class="fa fa-envelope-o mr-4" aria-hidden="true"></i></a>
+                <a href="https://www.xing.com/profile/Julian_Haupt" target="_blank" class="xing"><i class="fa fa-xing mr-4" aria-hidden="true"></i></a>
+                <a href="https://fb.com/julian.haupt" target="_blank" class="facebook"><i class="fa fa-facebook mr-4"" aria-hidden="true"></i></a>
+                <a href="https://github.com/hauptmedia" target="_blank" class="github"><i class="fa fa-github" aria-hidden="true"></i></a>
+
             </div>
-            <div class="mt-4">
+            <div class="mt-5">
                 <i class="fa fa-home mr-2" aria-hidden="true"></i>Julian Haupt, Jahnstr. 1, 01067 Dresden
 
 
