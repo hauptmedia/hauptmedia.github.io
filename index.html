@@ -9,10 +9,21 @@
         <title>hauptmedia - connecting the dots since 2001.</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <style>
             body {
                 color: #ebeced;
                 overflow:hidden;
+            }
+            a {
+                color: #ebeced;
+                transition: all 0.5s;
+            }
+            .social {
+                font-size: 1.8em;
+            }
+            a:hover {
+                animation: neon 1.5s ease-in-out infinite alternate;
             }
             #canvas{
                 overflow: hidden;
@@ -26,20 +37,33 @@
                 color:#fff;
                 text-align:center;
             }
+
+            @-webkit-keyframes neon {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+                }
+                to {
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+                }
+            }
         </style>
 
     </head>
     <body>
     <div class="w-100 h-100">
-        <div id="content" class="canvas-content">
+        <div class="canvas-content">
             <img src="img/logo_hauptmedia_white.svg" id="logo" class="img-fluid pl-5 pr-5" />
-            <div class="pl-5 pr-5">
+            <div class="m-5">
                 <h3>connecting the dots since 2001.</h3>
             </div>
-            <div class="p-5">
-                <em>Contact:<br>
-                    julian.haupt@hauptmedia.de<br><br>
-                    Julian Haupt<br>Jahnstr. 1<br>01067 Dresden</em>
+            <div class="mt-6 mb-6 social">
+                <a href="mailto:julian.haupt@hauptmedia.de" target="_blank"><i class="fa fa-envelope mr-4" aria-hidden="true"></i></a>
+                <a href="https://www.xing.com/profile/Julian_Haupt" target="_blank"><i class="fa fa-xing mr-4" aria-hidden="true"></i></a>
+                <a href="https://fb.com/julian.haupt" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </div>
+            <div class="mt-4">
+                <i class="fa fa-home mr-2" aria-hidden="true"></i>Julian Haupt, Jahnstr. 1, 01067 Dresden
+
 
             </div>
         </div>
@@ -101,7 +125,7 @@
             var shadowX = xOffset * -30,
                 shadowY = yOffset * -30;
 
-            $("#content").css("filter", "drop-shadow(" + shadowX + "px " + shadowY + "px 5px rgba(0,0,0,0.5))");
+            $("#logo").css("filter", "drop-shadow(" + shadowX + "px " + shadowY + "px 5px rgba(0,0,0,0.5))");
 
         }
 
