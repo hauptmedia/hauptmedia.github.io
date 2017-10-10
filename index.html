@@ -141,7 +141,9 @@
             $(".canvas-content").css("padding-top",($(window).height()-$(".canvas-content").height())/2+"px");
         }
 
-        centerContent();
+        $( document ).ready(function() {
+            centerContent();
+        });
 
         $(window).resize(function() {
             centerContent();
