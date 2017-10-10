@@ -1,143 +1,71 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
-<html lang="de">
+        <!--script src="js/bootstrap.min.js"></script>-->
 
-	<head>
-		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
-		<title>HAUPTMEDIA</title>
-		<link href="style_screen.css" rel="stylesheet" type="text/css" media="screen">
-		<link href="style_print.css" rel="stylesheet" type="text/css" media="print">
-		<script type="text/javascript" src="scripts.js"></script>
-	</head>
+        <title>hauptmedia - connecting the dots since 2001.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            body {
+                color: #ebeced;
+                overflow:hidden;
+            }
+            #canvas{
+                overflow: hidden;
+                position:absolute;
+                top:0;
+                left:0;
+            }
+            div.canvas-content{
+                position:relative;
+                z-index:2000;
+                color:#fff;
+                text-align:center;
+            }
+        </style>
 
-	<body>
-	
-	<h1 id="title_print">Hauptmedia | Software-Entwicklung - IT-Consuling - Programming</h1>
-	<a id="top" name="top"></a>
-	<div id="wrapper_all">
-	
-	<div id="wrapper_header">
-	<div id="logo">
-					<a title="Haupt media Startseite" href="index.html"><img src="img/logo.gif" alt="Haupt Media Logo" border="0"></a></div>
-	
+    </head>
+    <body>
+    <div class="w-100 h-100">
+        <div class="canvas-content">
+            <img src="img/logo_hauptmedia_white.svg" class="img-fluid pl-5 pr-5"/>
+            <div class="pl-5 pr-5">
+                <h3>connecting the dots since 2001.</h3>
+            </div>
+            <div class="p-5">
+                <em>Contact:<br>
+                    julian.haupt@hauptmedia.de<br><br>
+                    Julian Haupt<br>Jahnstr. 1<br>01067 Dresden</em>
 
-	<div id="wrapper_content_a"><div id="wrapper_content_b"><div id="wrapper_content_c">
-	
-						<div id="content">
+            </div>
+        </div>
+        <div id="canvas" class="gradient"></div>
 
-							<h1>Startseite</h1>
-
-							<br>
-
-							<h2>Herzlich Willkommen!</h2>
-
-							<p>
-								Aktuell befinden sich auf dieser Website keine Inhalte.
-							</p>
-
-							<p>
-								Sie k&ouml;nnen mich erreichen:
-							</p>
-
-							<ul>
-								<li>via E-Mail unter der Adresse <a href="mailto:julian.haupt@hauptmedia.de">julian.haupt@hauptmedia.de</a></li>
-								<li>via <a href="https://www.xing.com/profile/Julian_Haupt">Xing</a></li>
-								<li>via <a href="https://www.facebook.com/julian.haupt">Facebook</a></li>
-								<li>via <a href="https://github.com/hauptmedia">GitHub</a></li>
-							</ul>
-
-							<br>
-							<p>
-								Es gr&uuml;&szlig;t Sie herzlichst<br><br>
-								Julian Haupt
-							</p>
-
-							<br><br><br>
-
-							<h3>PGP Schl&uuml;ssel</h3>
-							<p>Um mir PGP-verschl&uuml;sselte E-Mails zu senden, benutzen Sie bitte folgenden PGP public key:</p>
-<pre style="color:#a3a3a3">
------BEGIN PGP PUBLIC KEY BLOCK-----
-xsFNBFYBLgYBEAD1VW0bmf+hx6+9jCNN81IF/VpYJr+18nep5sPnknhxpEy6
-m2wNv9t27gb+gdkIse60zfYweqp6xnBXqSbMwv6/wzdOE6Apd7knHYD+4mNA
-fHXca3C2ZSck0aPf3QcKt4Bo6kO4A8K4IGeGR+I2qaAp2M3feQ5aqOWcEg9S
-jxlQvOt62rHxW7iMDeVA/QDvOrDesO392K+FvVrd0orlulfWlIhnLDy2dfYk
-+9w5QnTq7hnuKIctBSldXbwZ0v5r7mSH8Svh+VLjDu9/YQFUGipbrCf6MFyU
-8RHrbNrmDXD0nctwWCMJ2FMkLKd/cj+EevQ6+JDztZtZP/4j01W7mw50/VVQ
-nEHIP0LZXCRABW2aLHZPtRz2HCL7PM7Msb3RJHf2uY24MziGPAHAWzOf0dk2
-q6EGg+RlueH8Rqc2aqlWqqqq6vLkXN+r+gxGqXIPv8GuAIF7Ipiln4V96bPx
-36ZPzW4Wx2bu8+N9ODAv9zpMITyE6e3XR3qqt2IwjmKog83/csMxVTCkHRpN
-14UY3uq8RTVUo4EmDIKchaWg+V+s1bsMEjpHqHgzRoEIAiQDeSSjPy/RsdEA
-14HTq4KnaTei7GgnBELI9qK9LeZEn0r0rFUql5vJZ3UVK/Nb5zqP/0a2oarF
-9wPO7s3gXWuUldQ5wQAbiw/lFb5czDR/mOiQUwARAQABzSlKdWxpYW4gSGF1
-cHQgPGp1bGlhbi5oYXVwdEBoYXVwdG1lZGlhLmRlPsLBdQQQAQgAKQUCVgEu
-DQYLCQgHAwIJEHK3qD6DM8wpBBUIAgoDFgIBAhkBAhsDAh4BAACAyA/7BuQL
-U1USqxjOrCsHHJHfSgAfrTa5EgLiX6USVWN9T9+uNKQEXRu+VzLN47cDWj9S
-CnlK6oOymq53oNJHY0MiSkeWSlJ5nA2+yOtb9mJmleyThtTytYz5D+76fwmU
-eaaNFdXVMUupEUZ7qvVXh3odM+h1aSmR2X6pkOOc9bQTs5bQay/OCp9ZQxAl
-yxgIuM3dMxzfgqL/HfQCvzZfIFcZK6V5Lz9d97ScDaLbjN/NddNtBTqVToTr
-ZBZBKdEneMEOApykLJ9pG4ygN6+2402VzuNXlmyK5/Wx8YVthoFr5jtPL3AV
-XAXoLUusymMCGN90OqfsuM0wNURdkydrDmt695kQMqDa3MnYsrv3cRzNHdIu
-AS5Mf4vThJ2TMoZkk2Yf/nMWUPOyd9r3ywY3mTyslsUQffJ6LSWNJEIW29nB
-kT6HbmCNV8F+SB4YvgL/5Le1aNZXjkw3JjEnoabZtd5LRLhmcPEA11YELon/
-njhcw7sR7rSx0746QrMtpO8dT6dG+gDhs+O2exDd47Q3jm9vobZN0l4OUHY1
-XGKQNry/+GDY8es90eQJDkmTCSGJBByNHjb7XXLsIOZlx5ezwojuapmLDQT3
-ZEa9NkTpmMl+cs0ZXr94/Iaub3esKMHtu23S4OZC1RgCPt2unS/zQdpfSQXL
-MPe8znPntsSYNkQB22fOwU0EVgEuBgEQAO16Wt2i7H/TsiW8sB8+SXP7dXNd
-9cvwPi8MJEb4RV/t/VmXHUJf1Z/XXgdzB11tsx+kjpGv/0nCq1QoQoqfWwsU
-FUPpRDeV68YZBuJ/H5g4REMoV9pTdyC87eUD3gVYrTXPfF3Hm805svQmnQ0n
-TGQaJle+imGchGfoEQ53PGPnjelj2Qc4XBMrGIIPGGIyn2kiy0VHbyQ5viad
-C1MNKQEVsCqY4MdITrn0oQIH+KhZWdyEJ3nBFtArIO0olgqQ0ja2SI5DoUp3
-n2SmIWRoldzmHmErqyjJJLMF5lAZAf6Qqb6+Oqqb2vq6cje5MGrAAuACmhmk
-xXcxDOak275uXrLr2r34bO2dYnQzk2O3MtdWwcTedt+GPfxtAQeNI+nud5e/
-ZpjH5Wqvdr4C+j2CiC45gTdUNnRUxDCrQ9wxwJl6Fu63fc0o2/7a8YxIrAWz
-lqThWzK94yDvnHviIaoQwO/LkghRKuDDL/mabgOHFKBDBniCGq0dyJwI0nio
-jcQxPnoND3rH7wlXF59LK1OFEmDXrWKtKu74Mxib5/mfjw6nfEDDxpsp9lJ6
-eXpcPJc7CJL2UnshR7hxPqHhdRl0Qbp9EV101Kpua8NKCoHP5x35hQtl67pq
-QKevI9HSqzJtFaASY0BvPPZPfzpvNEtI2P7O/gj0qwDeJ/gO0fXIyxMvABEB
-AAHCwV8EGAEIABMFAlYBLg4JEHK3qD6DM8wpAhsMAACZaRAA3NWnJkjsNfeq
-FZOzJwxcbP/kUN67pHBJKy4BHhl8nqGRw+hLWMuLcjo5W7BiJh2h4no82eET
-XHVaVBVyj5jvkCbmdu8NChIvMxr7eYn5Uq8R8MXzCSU/rQ7LZoPMOYluMzHi
-1/Z3PhsUsQG3fyf/Zpdxy4dJGlNHDPO36DVsm68y8lSaj3kQlTg4hgxDlWIj
-M6Z/fc2SY0LIAc+rWA3CIxJDTrxTJyEzdjYSD7N1NMrjQXAjWcL4QS5urf7f
-wovihctzOHmPEftEUzxVW3zDwp/9AuxGhrCAqGX9EyB61kaWG2MA3pRWJ+wU
-Bq3V2ZRPw+gDkhxpSq4VjR60rJRc1ywLoEJ8AR5dmalws5sW9Av4zu3FEFBI
-oebGPFsum3tPuEDAy7mjXL6rQrHHezdGUtYqvhTj4uOOVa6pGv3Kg0z2L/XC
-+gz2QTYbbwXMv3zo1uceI+yWtk7ZuMXtA3qHVh37swxx16B3V2gau5OXD59V
-8Rcgwsjb4ZwwRpERRmretsjNGq/YchO76kWyjuilzhul/2ITtxqWU/GwQcNi
-qj9J6RY6mMrkhGZSC703vb3yDX3GwQXofR/NtqtrJheuEtkWMT/8h98B1tSJ
-FiZ4iDAGuBRzlHUWKEX47Fo4fnpZKSjMi7MbRb5+DxV3fbfv48mOT59JRbLp
-CNzGiKaC2/E=
-=F/q5
------END PGP PUBLIC KEY BLOCK-----
-							</pre>
+    </div>
 
 
-							<h3>Impressum</h3>
-							<p>Hauptmedia<br>Inh. Julian Haupt<br>Jahnstr. 1<br>01067 Dresden</p>
+        <script src="js/three.min.js"></script>
+        <script src="js/projector.js"></script>
+        <script src="js/canvas-renderer.js"></script>
+        <script src="js/3d-lines-animation.js"></script>
+        <script src="js/color.js"></script>
 
-							
-						
-							
-						</div>
-					</div></div></div>
-	
-	
-	
-	
-	
-	
-	<div id="wrapper_footer">
-	<div id="footer_left">
-					&copy; 2015 Hauptmedia
-	<div id="footer_right">
 
-	</div>
-	
-	
-	
-	
-	</div>
-	</body>
+    <script>
+        function centerContent() {
+            $(".canvas-content").css("padding-top",($(window).height()-$(".canvas-content").height())/2+"px");
+        }
 
+        centerContent();
+
+        $(window).resize(function() {
+            centerContent();
+        });
+    </script>
+
+    </body>
 </html>
